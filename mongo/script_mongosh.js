@@ -50,6 +50,6 @@ printjson(db.tickets.find({atencion_min:{$gt:6}}).toArray());
 print('Semanas con menos de 15 defectos');
 
 printjson(db.pruebas.find({defectos_nuevos:{$lt:15}}).toArray());
-print('Actualización T7');
+ 
 
  

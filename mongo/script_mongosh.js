@@ -8,6 +8,7 @@ db = db.getSiblingDB('MatriculaAPP');
 
 
 
+
 // Si no existe creaos los agentes nosotros lo creamos : )
 if (db.Agente.countDocuments({}) === 0) {
   db.Agente.insertMany([
@@ -18,17 +19,19 @@ if (db.Agente.countDocuments({}) === 0) {
 
 
 
-if (db.tickets.countDocuments({}) === 0) {
+if (db.tickets.countDocuments({}) === 0)
+   {
   db.tickets.insertMany([
-    {_id:'T1', llegada_min:0, atencion_min:5, prioridad:'Alta', agente_id:'1'},
-    {_id:'T2', llegada_min:3, atencion_min:7, prioridad:'Alta', agente_id:'1'},
-    {_id:'T3', llegada_min:6, atencion_min:4, prioridad:'Media', agente_id:'1'},
-    {_id:'T4', llegada_min:14, atencion_min:8, prioridad:'Baja', agente_id:'1'},
-    {_id:'T5', llegada_min:25, atencion_min:6, prioridad:'Alta', agente_id:'1'},
-    {_id:'T6', llegada_min:28, atencion_min:5, prioridad:'Media', agente_id:'1'},
-    {_id:'T7', llegada_min:40, atencion_min:9, prioridad:'Baja', agente_id:'1'},
-    {_id:'T8', llegada_min:52, atencion_min:4, prioridad:'Alta', agente_id:'1'}
-  ]);
+    {_id:'T1', minutoLlegada:0, minutoAtencion:5, prioridad:'Alta', agente_id:'1'},
+    {_id:'T2', minutoLlegada:3, minutoAtencion:7, prioridad:'Alta', agente_id:'1'},
+    {_id:'T3', minutoLlegada:6, minutoAtencion:4, prioridad:'Media', agente_id:'1'},
+    {_id:'T4', minutoLlegada:14, minutoAtencion:8, prioridad:'Baja', agente_id:'1'},
+    {_id:'T5', minutoLlegada:25, minutoAtencion:6, prioridad:'Alta', agente_id:'1'},
+    {_id:'T6', minutoLlegada:28, minutoAtencion:5, prioridad:'Media', agente_id:'1'},
+    {_id:'T7', minutoLlegada:40, minutoAtencion:9, prioridad:'Baja', agente_id:'1'},
+    {_id:'T8', minutoLlegada:52, minutoAtencion:4, prioridad:'Alta', agente_id:'1'}
+  ]
+);
 }
 
 
@@ -45,11 +48,15 @@ printjson(db.tickets.find({prioridad:'Alta'}).toArray());
 print('Tickets con atención mayor a 6 minutos');
 
 
-printjson(db.tickets.find({atencion_min:{$gt:6}}).toArray());
+printjson(db.tickets.find({minutoAtencion:{$gt:6}}).toArray());
 
 print('Semanas con menos de 15 defectos');
 
 printjson(db.pruebas.find({defectos_nuevos:{$lt:15}}).toArray());
+
+print('Actualizar T7 a prioridad Media');
+printjson(db.tickets.updateOne({_id: 'T7'}, {$set: {prioridad: 'Media'}}));
+printjson(db.tickets.findOne({_id: 'T7'}));
  
 
  

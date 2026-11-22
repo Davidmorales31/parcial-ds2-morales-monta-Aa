@@ -19,6 +19,9 @@ py -m pip install -r matplotlib
 mongosh --file mongo/script_mongosh.js
 py src/main.py
 
+
+## fase 2 
+Escogimos la opción A: teoría de colas, con la clase MesaDeAyuda.
   
 
  

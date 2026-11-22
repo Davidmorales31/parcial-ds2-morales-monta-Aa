@@ -1,3 +1,7 @@
+## Nosotros 
+
+Juan Morales | Sofia Montaña 
+
 # parcial-ds2-morales-monta-Aa
 
 Creamos las base llamanola matriculaAPP, con tres colecciones, pruebas, tickets y Agente

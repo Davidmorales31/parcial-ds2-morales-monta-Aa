@@ -1,0 +1,70 @@
+{
+  "metricas": {
+    "lambda": 8.076923076923077,
+    "mu": 10.0,
+    "rho": 0.8076923076923077,
+    "Lq": 3.3923076923076927,
+    "Wq_horas": 0.41999999999999993
+  },
+  "espera_teorica_min": 25.199999999999996,
+  "simulacion": [
+    {
+      "ticket": "T1",
+      "minutoLlegada": 0,
+      "inicio_min": 0,
+      "fin_min": 5,
+      "espera_min": 0
+    },
+    {
+      "ticket": "T2",
+      "minutoLlegada": 3,
+      "inicio_min": 5,
+      "fin_min": 12,
+      "espera_min": 2
+    },
+    {
+      "ticket": "T3",
+      "minutoLlegada": 6,
+      "inicio_min": 12,
+      "fin_min": 16,
+      "espera_min": 6
+    },
+    {
+      "ticket": "T4",
+      "minutoLlegada": 14,
+      "inicio_min": 16,
+      "fin_min": 24,
+      "espera_min": 2
+    },
+    {
+      "ticket": "T5",
+      "minutoLlegada": 25,
+      "inicio_min": 25,
+      "fin_min": 31,
+      "espera_min": 0
+    },
+    {
+      "ticket": "T6",
+      "minutoLlegada": 28,
+      "inicio_min": 31,
+      "fin_min": 36,
+      "espera_min": 3
+    },
+    {
+      "ticket": "T7",
+      "minutoLlegada": 40,
+      "inicio_min": 40,
+      "fin_min": 49,
+      "espera_min": 0
+    },
+    {
+      "ticket": "T8",
+      "minutoLlegada": 52,
+      "inicio_min": 52,
+      "fin_min": 56,
+      "espera_min": 0
+    }
+  ],
+  "espera_media_simulada_min": 1.625,
+  "Wq_demanda_9_5_min": 114.0
+}
